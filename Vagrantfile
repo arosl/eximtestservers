@@ -79,6 +79,12 @@ Vagrant.configure("2") do |config|
     eximtest04.vm.network "private_network", ip: "172.16.120.104"
   end
 
+  config.vm.define "eximtest05" do  |eximtest05|
+    eximtest05.vm.box ="debian/bullseye64"
+    eximtest05.vm.hostname = "eximtest05"
+    eximtest05.vm.network "private_network", ip: "172.16.120.105"
+  end
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
