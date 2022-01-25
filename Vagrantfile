@@ -37,13 +37,13 @@ Vagrant.configure("2") do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network", bridge: "wlp1s0"
+  config.vm.network "public_network", bridge: "wlp9s0"
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "data/", "/vagrant_data"
   
   # Create 3 vms 
   # (1..3).each do |i|
